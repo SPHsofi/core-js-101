@@ -128,7 +128,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  * Returns a last digit of a integer number.
  *
  * @param {number} value
- * @return {number}
+ * @return {string}
  *
  * @example:
  *   100     => 0
@@ -136,8 +136,9 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  const arr = value.toString().split('').reverse();
+  return arr[0];
 }
 
 
