@@ -468,8 +468,11 @@ function sortCitiesArray(arr) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  // eslint-disable-next-line array-callback-return
+  return Array(n).fill(null).map((_, i) =>
+    // eslint-disable-next-line no-shadow,implicit-arrow-linebreak
+    Array(n).fill(0).map((_, j) => (i === j ? 1 : 0)));
 }
 
 /**
